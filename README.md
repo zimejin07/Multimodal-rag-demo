@@ -1,6 +1,16 @@
 # AI Assistant Platform with RAG Technology
 
-A sophisticated Next.js 15 application showcasing advanced AI capabilities through **Retrieval-Augmented Generation (RAG)** technology. The platform combines real-time image classification with intelligent document retrieval to provide contextual, knowledge-based responses.
+A Next.js 15 application implementing Retrieval-Augmented Generation (RAG) with multimodal inputs. The system integrates client-side image classification with vector-based document retrieval to generate context-aware responses.
+
+# The platform combines:
+
+Image classification via TensorFlow.js
+
+Semantic document retrieval via Pinecone
+
+LLM orchestration via LangChain and OpenAI
+
+Image-derived labels are used to enrich retrieval queries, improving relevance and grounding of generated responses.
 
 ## 🚀 Key Features
 
@@ -185,4 +195,10 @@ For issues and questions:
 
 ---
 
-**Built with ❤️ by Zimuzo Ejinkeonye**
+Deployment
+
+Designed for Vercel and compatible with any Node.js runtime supporting server functions.
+
+License
+
+MIT
