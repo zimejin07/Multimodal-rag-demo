@@ -62,47 +62,6 @@ PINECONE_INDEX=your_pinecone_index_name
 5. **Access the application**
    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📖 How to Use
-
-### 1. RAG-Powered Image Analysis
-1. Navigate to the main homepage
-2. Upload an image using the drag-and-drop interface
-3. Ask any question about the image
-4. The system will:
-   - classify the image using TensorFlow.js
-   - search your knowledge base for relevant information
-   - provide contextual, intelligent responses
-
-### 2. Upload Custom Knowledge
-1. Click "Upload Knowledge" or navigate to `/upload`
-2. Drag and drop or select your documents (PDF, TXT, DOCX, MD)
-3. Click "Process Files" to add them to your knowledge base
-4. Documents are automatically chunked and embedded for optimal retrieval
-
-### 3. General Chat
-- Use the sidebar chat for general AI conversations
-- This uses standard AI without accessing your custom knowledge base
-- Great for general questions and casual interaction
-
-## 🔧 Advanced Features
-
-### RAG System Architecture
-```
-User Image + Question → Image Classification → Vector Search → Context Retrieval → Enhanced Response
-```
-
-1. **Image Processing**: TensorFlow.js classifies uploaded images
-2. **Embedding Generation**: Creates vector representations for semantic search
-3. **Knowledge Retrieval**: Searches vector database for relevant document chunks
-4. **Context Integration**: Combines image analysis with retrieved knowledge
-5. **Response Generation**: LangChain orchestrates the final AI response
-
-### Performance Optimizations
-- **Model Caching**: TensorFlow.js models cached in IndexedDB
-- **Streaming Responses**: Real-time AI response streaming
-- **Vector Database**: Fast semantic search with Pinecone
-- **Memory Management**: Proper tensor cleanup and resource management
-
 ## 🌐 Deployment
 
 ### Vercel (Recommended)
