@@ -12,43 +12,6 @@ LLM orchestration via LangChain and OpenAI
 
 Image-derived labels are used to enrich retrieval queries, improving relevance and grounding of generated responses.
 
-## 🚀 Key Features
-
-### RAG-Powered Image Analysis
-- **Smart Image Classification**: Upload images for instant AI-powered object recognition
-- **Knowledge-Enhanced Responses**: Automatically searches your custom knowledge base for relevant information
-- **Contextual Intelligence**: Combines computer vision with document retrieval for comprehensive answers
-- **Real-time Processing**: Live streaming responses as the AI processes and retrieves information
-
-### 💬 Dual AI Experience
-- **RAG-Enabled Image Classifier**: Advanced system that searches uploaded documents for contextual answers
-- **General Chat Assistant**: Standard conversational AI for general questions and interactions
-- **Clear Technology Distinction**: Users understand when they're using RAG vs. standard AI
-
-### 📚 Custom Knowledge Management
-- **Document Upload System**: Drag-and-drop interface for PDFs, TXT, DOCX, and Markdown files
-- **Intelligent Chunking**: Automatic text splitting and embedding generation for optimal retrieval
-- **Vector Database**: Powered by Pinecone for fast, semantic document search
-- **Progress Tracking**: Real-time upload status and chunk creation feedback
-
-## 🛠️ Technology Stack
-
-### Core Technologies
-- **Next.js 15** (App Router) - Modern React framework with server-side capabilities
-- **React** (Client Components) - Interactive user interface components
-- **TypeScript** - Type-safe development experience
-
-### AI & Machine Learning
-- **LangChain** - Orchestrates LLM interactions and RAG workflows
-- **OpenAI API** - Powers text generation and embeddings
-- **TensorFlow.js + MobileNet** - Client-side image classification
-- **Pinecone** - Vector database for semantic search
-
-### UI/UX
-- **Tailwind CSS** - Modern, responsive styling
-- **Lucide React** - Beautiful icon library
-- **Gradient Designs** - Modern visual aesthetics
-
 ## 🚀 Getting Started
 
 ### Prerequisites
