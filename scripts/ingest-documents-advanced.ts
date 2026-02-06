@@ -1,4 +1,3 @@
-// scripts/ingest-documents.ts
 import { Pinecone } from "@pinecone-database/pinecone";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { PineconeStore } from "@langchain/pinecone";
@@ -22,9 +21,9 @@ const EXPECTED_EMBEDDING_DIMENSION = 1536; // OpenAI text-embedding-ada-002
 
 async function ingestDocuments() {
   try {
-    console.log("🚀 Starting document ingestion...");
+    console.log("Starting document ingestion...");
     console.log(
-      "📊 Expected embedding dimension:",
+      "Expected embedding dimension:",
       EXPECTED_EMBEDDING_DIMENSION
     );
 
@@ -47,7 +46,7 @@ async function ingestDocuments() {
     });
 
     const indexName = process.env.PINECONE_INDEX;
-    console.log(`📋 Checking index: ${indexName}`);
+    console.log(`Checking index: ${indexName}`);
 
     // Check if index exists and validate dimensions
     let index;
@@ -58,7 +57,7 @@ async function ingestDocuments() {
       );
 
       if (currentIndex) {
-        console.log(`📊 Current index dimension: ${currentIndex.dimension}`);
+        console.log(`Current index dimension: ${currentIndex.dimension}`);
 
         if (currentIndex.dimension !== EXPECTED_EMBEDDING_DIMENSION) {
           console.error(`❌ DIMENSION MISMATCH!`);
@@ -103,16 +102,19 @@ async function ingestDocuments() {
 
     // Initialize embeddings with explicit model to ensure consistency
     console.log("🤖 Initializing OpenAI embeddings...");
+    
+    // OpenAI's text-embedding-ada-002 is a high-performance and widely adopted text embedding model released 
+    // that converts text into 1536-dimensional vectors for tasks like semantic search, clustering, and classification.
     const embeddings = new OpenAIEmbeddings({
       openAIApiKey: process.env.OPENAI_API_KEY,
       modelName: "text-embedding-ada-002", // Explicit model specification
     });
 
     // Test embedding to verify dimensions
-    console.log("🧪 Testing embedding dimensions...");
+    console.log("Testing embedding dimensions...");
     try {
       const testEmbedding = await embeddings.embedQuery("test");
-      console.log(`📏 Actual embedding dimension: ${testEmbedding.length}`);
+      console.log(`Actual embedding dimension: ${testEmbedding.length}`);
 
       if (testEmbedding.length !== EXPECTED_EMBEDDING_DIMENSION) {
         console.error(`❌ EMBEDDING DIMENSION MISMATCH!`);
