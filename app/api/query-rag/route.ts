@@ -44,7 +44,7 @@ export async function POST(req: Request) {
 
     const indexName = process.env.PINECONE_INDEX as string;
 
-    // Get the index (don't create it here - should be created during setup)
+    // Get the index
     let index;
     try {
       index = pinecone.Index(indexName);
